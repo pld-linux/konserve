@@ -1,12 +1,12 @@
 Summary:	Small backup application for the KDE
 Summary(pl):	Niewielka aplikacja do kopii zapasowych dla KDE
 Name:		konserve
-Version:	0.10.2
+Version:	0.10.3
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/konserve/%{name}-%{version}.tar.bz2
-# Source0-md5:	5ca31d0eb261a52e91a1593b5da3b7be
+# Source0-md5:	04260394e62d799957002262d2efb9e6
 URL:		http://konserve.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
