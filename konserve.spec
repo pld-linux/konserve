@@ -56,4 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/konserve
 %{_datadir}/apps/*
 %{_iconsdir}/*/*/*/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
