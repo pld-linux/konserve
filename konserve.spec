@@ -1,5 +1,5 @@
 Summary:	Small backup application for the KDE
-Summary(pl.UTF-8):   Niewielka aplikacja do kopii zapasowych dla KDE
+Summary(pl.UTF-8):	Niewielka aplikacja do kopii zapasowych dla KDE
 Name:		konserve
 Version:	0.10.3
 Release:	1
