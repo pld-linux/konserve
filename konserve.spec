@@ -10,9 +10,8 @@ Source0:	http://dl.sourceforge.net/konserve/%{name}-%{version}.tar.bz2
 URL:		http://konserve.sourceforge.net/
 BuildRequires:	kdelibs-devel
 BuildRequires:	qt-devel
+BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define         _htmldir        /usr/share/doc/kde/HTML
 
 %description
 Konserve is a small backup application for the KDE 3.x environment.
@@ -25,8 +24,7 @@ Konserve to niewielka aplikacja do kopii zapasowych dla środowiska KDE
 %setup -q
 
 %build
-kde_appsdir="%{_desktopdir}"; export kde_appsdir
-kde_htmldir="%{_htmldir}"; export kde_htmldir
+kde_htmldir="%{_kdedocdir}"; export kde_htmldir
 %configure
 
 %{__make}
@@ -39,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_desktopdir}/kde
 
-mv $RPM_BUILD_ROOT%{_desktopdir}/Applications/konserve.desktop \
+mv $RPM_BUILD_ROOT%{_datadir}/applnk/Applications/konserve.desktop \
         $RPM_BUILD_ROOT%{_desktopdir}/kde
 
 echo "Categories=Qt;KDE;System;" >> \
@@ -55,5 +53,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/konserve
 %{_datadir}/apps/*
-%{_iconsdir}/*/*/*/*
-%{_desktopdir}/*.desktop
+%{_iconsdir}/hicolor/*/apps/konserve.png
+%{_desktopdir}/kde/*.desktop
